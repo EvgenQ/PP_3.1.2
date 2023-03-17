@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta th:charset="UTF-8">
+    <title th:text="${titleText}"></title>
+    <style>
+        /* Установка шрифта */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стилизация заголовка */
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Стилизация кнопки */
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            margin: 10px auto;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .button-row {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 th:text="${H1_Text}"></h1>
+
+    <form th:action="@{/users}" method="GET">
+        <div class="button-row">
+            <button type="submit" class="button-add">Начать</button>
+        </div>
+    </form>
+</body>
+</html>
